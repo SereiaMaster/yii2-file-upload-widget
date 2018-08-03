@@ -9,3 +9,6 @@
    <!-- The file input field used as target for the file upload widget -->
     <?= $input ?>
 </span>
+<div class="form-group has-error anexo-caminho">
+<div class="help-block"></div>
+</div>
