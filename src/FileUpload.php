@@ -35,6 +35,8 @@ class FileUpload extends BaseUpload
      */
     public $uploadButtonTemplateView = 'uploadButton';
 
+    public $perfil = false;
+
     /**
      * @inheritdoc
      */
@@ -56,7 +58,7 @@ class FileUpload extends BaseUpload
             : Html::fileInput($this->name, $this->value, $this->options);
 
         echo $this->useDefaultButton
-            ? $this->render($this->uploadButtonTemplateView, ['input' => $input])
+            ? $this->render($this->uploadButtonTemplateView, ['input' => $input, 'perfil' => $this->perfil])
             : $input;
 
         $this->registerClientScript();
